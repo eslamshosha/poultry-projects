@@ -1223,7 +1223,7 @@ footer {
 .nav-wrap {
   display: flex;
   flex-direction: column;
-  max-height: 100px;
+  max-height: 128px;
   flex-wrap: wrap;
 }
 .nav-foot li {
