@@ -461,12 +461,14 @@ header {
     min-height: 250px;
   }
   .caption-title {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
   .caption-pargh {
     font-size: 14px;
     margin-bottom: 12px;
     padding: 0 20px;
+    display: none;
   }
   html[dir="ltr"] .caption-pargh {
     font-size: 12px;
@@ -562,6 +564,12 @@ html[dir="ltr"] .about-us-head {
   .about-us-head {
     font-size: 20px;
     text-align: center;
+  }.about-us-head {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    border-left: none;
+    white-space: unset;
   }
   .about-us-pargh{
     text-align: center;
@@ -586,6 +594,11 @@ html[dir="ltr"] .about-us-head {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: 100%;
+  transition: all .3s ease-in-out;
+}
+.features-box:hover{
+  background-size: 110%;
 }
 .features-relative {
   position: relative;
@@ -642,6 +655,12 @@ html[dir="ltr"] .about-us-head {
   }
   .features-cont {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .features-box{
+    background-size: cover;
+  }
+  .features-box:hover{
+    background-size: cover;
   }
 }
 /*                      features-section                      */
@@ -1144,7 +1163,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 60px;
   margin-bottom: 70px;
 }
@@ -1424,7 +1443,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .social {
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
   .contact-ancor i {
     width: 45px;
@@ -1439,7 +1458,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .nav-foot-cont {
     text-align: start;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
   .nav-foot-header {
     text-align: center;
@@ -1454,7 +1473,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     text-align: center;
   }
   .copy-flex {
-    padding-top: 40px;
+    padding-top: 30px;
     justify-content: center;
     flex-direction: column;
   }
@@ -1575,6 +1594,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     font-weight: 700;
   }
   /*                    menu in phone size                      */
@@ -1805,6 +1825,8 @@ html[dir="rtl"] .footer-accordion.active:after {
   .cats-dispaly li a {
     justify-content: center;
     color: var(--black-color);
+    font-size: 16px;
+    font-weight: 700;
   }
   .cats-dispaly::before {
     display: none;
